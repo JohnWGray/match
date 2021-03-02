@@ -1,0 +1,27 @@
+
+    .spacer {
+      margin: -15px;
+  }
+
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+  
+  
+}
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 576px) {
+
+}
+
+
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
