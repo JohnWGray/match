@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const grid = document.querySelector('.grid')
     const resultDisplay = document.querySelector('#result')
+    const headingDisplay = document.querySelector('#heading')
     let cardsChosen = []
     let cardsChosenId = []
     let cardsWon = []
@@ -76,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createBoard() {
         for (let i = 0; i < cardArray.length; i++) {
             const card = document.createElement('img')
-            card.setAttribute('src', 'images/cardback.png')
+            card.setAttribute('src', 'images/fire.png')
             card.setAttribute('data-id', i)
             card.addEventListener('click', flipCard)
             grid.appendChild(card)
@@ -115,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //If the same square is chosen.
         if (optionOneId == optionTwoId) {
-            cards[optionOneId].setAttribute('src', 'images/cardback.png')
-            cards[optionTwoId].setAttribute('src', 'images/cardback.png')
+            cards[optionOneId].setAttribute('src', 'images/fire.png')
+            cards[optionTwoId].setAttribute('src', 'images/fire.png')
             alert('You have clicked the same image!')
         }
         // Or if you find a match.
@@ -128,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[optionTwoId].removeEventListener('click', flipCard)
             cardsWon.push(cardsChosen)
         } else {
-            cards[optionOneId].setAttribute('src', 'images/cardback.png')
-            cards[optionTwoId].setAttribute('src', 'images/cardback.png')
+            cards[optionOneId].setAttribute('src', 'images/fire.png')
+            cards[optionTwoId].setAttribute('src', 'images/fire.png')
             alert('Sorry, try again')
         }
         //These will happen regardless of what happens. 
@@ -143,7 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsChosenId = []
         resultDisplay.textContent = cardsWon.length
         if (cardsWon.length === cardArray.length / 2) {
-            resultDisplay.textContent = 'Congratulations! You found them all!'
+            headingDisplay.textContent = 'Congratulations! You found them all!'
+
         }
     }
     // Initializes the createBoard function. So it runs automatically when the page loads. 

@@ -1,9 +1,18 @@
-
+body {
+  text-align: center;
+}
+#heading {
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 1%;
+}
 .container {
   display: flex;
-  background-color:blue ;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .grid {
   display: flex;
