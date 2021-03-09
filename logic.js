@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Radomize card order when page loads
     cardArray.sort(() => 0.5 - Math.random())
 
-    // Sets this grid var to the grid class in the index. Notice the .grid because it's a class. 
-    // Sets resultDisplay var to #result in the index. Notice the # because it's an id.
+    // Sets this 'grid' var to the grid class in the index. Notice the .grid because it's a class. 
+    // Sets 'resultDisplay' var to #result in the index. Notice the # because it's an id.
     // Makes 3 empty arrays for cards chosen, the chosen id, and cards that are matched/won. 
 
     const grid = document.querySelector('.grid')
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // #1: Makes board using cardArray as length for the # of iterations on the for loop.
     // #2: Creates and sets 'card' to a newly created img element for each iteration.
-    // #3: Adds the 'cardback' image to every new img element.
+    // #3: Adds the 'fire' image to every new img element.
     // #4: Gives each 'card' an id via 'data-id' which is set to i. So each one will be different.
     // #5: Adds an event listener for a click, and then runs flipCard if they are clicked.
     // #6: Since these are img elements, we use appendChild(card) to the grid.  
@@ -106,23 +106,32 @@ document.addEventListener('DOMContentLoaded', () => {
     //////////check for matches//////////////
     //(IT'S CHECKING IF THE 'name' FOR EACH CARD MATCHES)
 
-    // #1:
-    // #2:
-    // #3: 
+    /* #1: Makes 'cards' and sets it to all 'img' elements in the DOM. This will be used 
+    as a conduit to change the card images when needed.  */
+    // #2: Makes 'optionOneId and sets it to the 1st element in the cardsChosenId array.
+    // #3: Makes 'optionTwoId and sets it to the 2st element in the cardsChosenId array.
     function checkForMatch() {
         const cards = document.querySelectorAll('img')
         const optionOneId = cardsChosenId[0]
         const optionTwoId = cardsChosenId[1]
 
         //If the same square is chosen.
+        // #1: Checks if the optionIds are equal.
+        // #2: If the same,  reset attributes of the optionIds to the fire image. 
         if (optionOneId == optionTwoId) {
             cards[optionOneId].setAttribute('src', 'images/fire.png')
             cards[optionTwoId].setAttribute('src', 'images/fire.png')
-            alert('You have clicked the same image!')
+
         }
         // Or if you find a match.
+        /* #1: Checks if 1st element is 'strictly' equal to 2nd element in cardsChosen array.(same type & Value)
+        THIS IS CARDS CHOSEN, NOT CHOSEN ID, ITS DIFFERENT*/
+        // #2: Sets optionIds to 'blank image', simulating that they are gone. They are still technically there.
+        // #3: Removes eventListeners for the optionIds, so you clicking on them doesnt do anything.  
+        // #4: Push the cards in cardsChosen to cardswon array. 
+        // #5: Sets the OptionIds to fire image for any other potential scenerio.  
         else if (cardsChosen[0] === cardsChosen[1]) {
-            alert('You found a match')
+
             cards[optionOneId].setAttribute('src', 'images/blank.png')
             cards[optionTwoId].setAttribute('src', 'images/blank.png')
             cards[optionOneId].removeEventListener('click', flipCard)
@@ -131,14 +140,17 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             cards[optionOneId].setAttribute('src', 'images/fire.png')
             cards[optionTwoId].setAttribute('src', 'images/fire.png')
-            alert('Sorry, try again')
+
         }
-        //These will happen regardless of what happens. 
+
+        //These will occur regardless of what happens. (We're Still in checkformatch() function)
 
         // #1: Set cardsChosen to an empty array (resetting it)
         // #2: Set cardsChosenId to an empty array (resetting it)
         // #3: Sets the textConent(same idea as innerhtml) of resultDisplay to the # of cards won/matched. 
-        // #4: Checks if you got all the cards. (Still figuring it out) 
+        /* #4:  Since there are only 6 orignal cards, if the cards won (6) is equal 
+        to the cardArray length(12)/2 (which is 6) then logically that means the player won.  */
+        // #5: Sets the textContent of headingDisplay to the congrats text. 
 
         cardsChosen = []
         cardsChosenId = []
