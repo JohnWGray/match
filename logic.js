@@ -48,7 +48,27 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'eclipse',
             img: 'images/eclipse.png'
-        }
+        },
+
+        {
+            name: 'flower',
+            img: 'images/flower.png'
+        },
+
+        {
+            name: 'flower',
+            img: 'images/flower.png'
+        },
+
+        {
+            name: 'sunset',
+            img: 'images/sunset.png'
+        },
+
+        {
+            name: 'sunset',
+            img: 'images/sunset.png'
+        },
     ]
 
     // Radomize card order when page loads
@@ -99,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsChosenId.push(cardId)
         this.setAttribute('src', cardArray[cardId].img)
         if (cardsChosen.length === 2) {
-            setTimeout(checkForMatch, 300)
+            setTimeout(checkForMatch, 170)
         }
     }
 
