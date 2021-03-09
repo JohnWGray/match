@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsChosenId.push(cardId)
         this.setAttribute('src', cardArray[cardId].img)
         if (cardsChosen.length === 2) {
-            setTimeout(checkForMatch, 500)
+            setTimeout(checkForMatch, 300)
         }
     }
 
@@ -157,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultDisplay.textContent = cardsWon.length
         if (cardsWon.length === cardArray.length / 2) {
             headingDisplay.textContent = 'Congratulations! You found them all!'
+            document.querySelector(".grid").style.visibility = "hidden";
 
         }
     }
