@@ -14,20 +14,19 @@ h2 {
   font-size: xx-large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
-  padding: 1%;
+  
 }
 .container {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 1%;
-  margin: 1%;
 }
 
 .grid {
   display: flex;
   flex-wrap: wrap;
+  flex-shrink: 1;
   width: 400px;
   height: 400px;
 }
