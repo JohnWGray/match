@@ -11,7 +11,7 @@ h2 {
 }
 
 #heading {
-  font-size: medium;
+  font-size: large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   
@@ -21,7 +21,7 @@ h2 {
   text-align: center;
   justify-content: center;
   align-items: center;
-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .grid {
