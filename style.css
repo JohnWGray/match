@@ -30,3 +30,7 @@ h2 {
   width: 400px;
   height: 400px;
 }
+
+img {
+  flex-shrink: 1;
+}
