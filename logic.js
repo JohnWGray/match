@@ -1,4 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    var min = 1;
+    var sec = 59;
+    setInterval(function () {
+        var a = new Date();
+        document.getElementById("timer").innerHTML = min + " : " + sec;
+        sec--;
+        if (sec == 00) {
+            min--;
+            sec = 59;
+            if (min == 0) {
+                sec = 59;
+            }
+        }
+
+        if (min == 0 && sec == 1) {
+            document.querySelector("#timer").style.visibility = "hidden";
+        }
+    }, 100);
+
+
     //card options
     const cardArray = [
         {
@@ -76,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sets this 'grid' var to the grid class in the index. Notice the .grid because it's a class. 
     // Sets 'resultDisplay' var to #result in the index. Notice the # because it's an id.
+    // Sets headingDisplay to #heading in the index. 
     // Makes 3 empty arrays for cards chosen, the chosen id, and cards that are matched/won. 
 
     const grid = document.querySelector('.grid')
@@ -127,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //(IT'S CHECKING IF THE 'name' FOR EACH CARD MATCHES)
 
     /* #1: Makes 'cards' and sets it to all 'img' elements in the DOM. This will be used 
-    as a conduit to change the card images when needed.  */
+    as a conduit to change the card images when needed. Particularly when comparing the ids. */
     // #2: Makes 'optionOneId and sets it to the 1st element in the cardsChosenId array.
     // #3: Makes 'optionTwoId and sets it to the 2st element in the cardsChosenId array.
     function checkForMatch() {
@@ -171,12 +193,13 @@ document.addEventListener('DOMContentLoaded', () => {
         /* #4:  Since there are only 6 orignal cards, if the cards won (6) is equal 
         to the cardArray length(12)/2 (which is 6) then logically that means the player won.  */
         // #5: Sets the textContent of headingDisplay to the congrats text. 
+        // #6: Hides the grid to get it out of the way. 
 
         cardsChosen = []
         cardsChosenId = []
         resultDisplay.textContent = cardsWon.length
         if (cardsWon.length === cardArray.length / 2) {
-            headingDisplay.textContent = 'Congratulations! You found them all!'
+            headingDisplay.textContent = 'YOU WON!'
             document.querySelector(".grid").style.visibility = "hidden";
 
         }
