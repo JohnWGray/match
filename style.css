@@ -1,7 +1,6 @@
 body {
   text-align: center;
-  background-color: rgb(255, 255, 255); /* For browsers that do not support gradients */
-  background-image: linear-gradient(rgb(255, 255, 255), rgb(202, 225, 255),rgb(98, 198, 255));
+  background-color: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -11,7 +10,7 @@ h2 {
 }
 
 
-#medTimer {
+#Timer {
   font-size: large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;

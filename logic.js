@@ -1,12 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    //Countdown Timer
+    // #1: Set the values of min and sec
+    // #2: Displays the min an sec in the innerHTML of 'timer'.
+    // #3: If sec is 00, the min goes down by 1. Then sec is set to 59. If min = 0, sec is set to 59.
+    // #4: If min & sec = 1, hide timer and the grid. Then display YOU LOST!
+
     var min = 1;
     var sec = 59;
+
     setInterval(function () {
-        var a = new Date();
+
         document.getElementById("timer").innerHTML = min + " : " + sec;
         sec--;
-        if (sec == 00) {
+        if (sec == 0) {
             min--;
             sec = 59;
             if (min == 0) {
@@ -16,8 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (min == 0 && sec == 1) {
             document.querySelector("#timer").style.visibility = "hidden";
+            document.querySelector(".grid").style.visibility = "hidden";
+            headingDisplay.textContent = 'YOU LOST!'
         }
-    }, 100);
+    }, 1000);
+
 
 
     //card options
@@ -201,6 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cardsWon.length === cardArray.length / 2) {
             headingDisplay.textContent = 'YOU WON!'
             document.querySelector(".grid").style.visibility = "hidden";
+            document.querySelector("#timer").style.visibility = "hidden";
 
         }
     }
