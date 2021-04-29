@@ -9,6 +9,38 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#easy {
+  background-color: LightGreen ;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+}
+
+#medium {
+  background-color: Gold ;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+}
+
+#hard {
+  background-color: LightSalmon;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+}
 
 #Timer {
   font-size: large;
@@ -16,12 +48,6 @@ h2 {
   font-weight: bold;
   
 }
-
-
-
-
-
-
 
 #heading {
   font-size: large;
