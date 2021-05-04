@@ -11,14 +11,6 @@
 
 <body>
 
-    <div id="difficulty">
-        <button id="easy" onclick="setEasy();createBoard()">EASY</button>
-
-        <button id="medium" onclick="setMedium();createBoard()">MEDIUM</button>
-
-        <button id="hard" onclick="setHard();createBoard()">HARD</button>
-    </div>
-
     <div id="Timer">
         <h3>
             <span id="timer">&#8205; <span>
@@ -30,6 +22,22 @@
     </div>
 
     <div class="container">
+
+        <div class="difficulty">
+            <button id="easy" onclick="setEasy();createBoard()">EASY</button>
+
+            <button id="medium" onclick="setMedium();createBoard()">MEDIUM</button>
+
+            <button id="hard" onclick="setHard();createBoard()">HARD</button>
+        </div>
+
+        <div class="reset">
+            <button id="restart" onclick="restart()">RESTART</button>
+        </div>
+
+
+
+
         <div class="grid"></div>
     </div>
 

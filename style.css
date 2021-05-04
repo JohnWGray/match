@@ -18,6 +18,7 @@ h2 {
   text-decoration: none;
   display: inline-block;
   font-size: 24px;
+  font-weight: bolder;
 }
 
 #medium {
@@ -29,6 +30,7 @@ h2 {
   text-decoration: none;
   display: inline-block;
   font-size: 24px;
+  font-weight: bolder;
 }
 
 #hard {
@@ -40,7 +42,21 @@ h2 {
   text-decoration: none;
   display: inline-block;
   font-size: 24px;
+  font-weight: bolder;
 }
+
+#restart {
+  background-color: rgb(81, 57, 214);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
 
 #Timer {
   font-size: large;
@@ -62,6 +78,23 @@ h2 {
   align-items: center;
   flex-wrap: nowrap;
 }
+
+.difficulty {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.reset {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 
 .grid {
   display: flex;

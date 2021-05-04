@@ -1,37 +1,45 @@
-//////////////////////////////////////////   STAGE 1 - T0P   ///////////////////////////////////////////////
+/////////////////////////   Start of Program  ///////////////////////////
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector("#heading").style.visibility = "hidden";
     document.querySelector("#timer").style.visibility = "hidden";
+    document.querySelector(".reset").style.visibility = "hidden";
+    document.querySelector(".difficulty").style.visibility = "visible";
 })
-//////////////////////////////////////////   STAGE 1 - BOTTOM   ///////////////////////////////////////////////
 
-///////    Timer Logic  /////////
+
+/////  Reset the page ////////
+
+function restart() {
+
+    location.reload()
+}
+
+/////// Timer Logic  /////////
 
 var min;
 var sec;
 
 function setEasy() {
-    document.querySelector("#difficulty").style.visibility = "hidden";
+    document.querySelector(".difficulty").style.visibility = "hidden";
     document.querySelector("#heading").style.visibility = "visible";
     document.querySelector("#timer").style.visibility = "visible";
-    sec = 180;
+    sec = 140;
 }
 
 function setMedium() {
-    document.querySelector("#difficulty").style.visibility = "hidden";
+    document.querySelector(".difficulty").style.visibility = "hidden";
     document.querySelector("#heading").style.visibility = "visible";
     document.querySelector("#timer").style.visibility = "visible";
     sec = 120;
 }
 
 function setHard() {
-    document.querySelector("#difficulty").style.visibility = "hidden";
+    document.querySelector(".difficulty").style.visibility = "hidden";
     document.querySelector("#heading").style.visibility = "visible";
     document.querySelector("#timer").style.visibility = "visible";
     sec = 60;
 }
-
 
 setInterval(function () {
 
@@ -41,11 +49,11 @@ setInterval(function () {
     if (sec == 0) {
         document.querySelector("#timer").style.visibility = "hidden";
         document.querySelector(".grid").style.visibility = "hidden";
-        headingDisplay.textContent = 'YOU LOST!'
+        headingDisplay.textContent = 'YOU LOST!';
+        document.querySelector(".reset").style.visibility = "visible";
 
     }
-}, 100);
-
+}, 700);
 
 //card options
 const cardArray = [
@@ -229,8 +237,7 @@ function checkForMatch() {
         headingDisplay.textContent = 'YOU WON!'
         document.querySelector(".grid").style.visibility = "hidden";
         document.querySelector("#timer").style.visibility = "hidden";
+        document.querySelector(".reset").style.visibility = "visible";
 
     }
 }
-
-
