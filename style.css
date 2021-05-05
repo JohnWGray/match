@@ -58,7 +58,7 @@ h2 {
 
 #restart {
   background-color: rgb(81, 57, 214);
-  border: 2px solid #8400ff;
+  border: 2px solid #6402c0;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -114,4 +114,3 @@ h2 {
   min-width: 400px;
   height: 400px;
 }
-
