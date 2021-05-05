@@ -10,44 +10,55 @@ h2 {
 }
 
 #easy {
-  background-color: LightGreen ;
-  border: none;
+  background-color: LightGreen;
+  width: 100%;
+  border: 2px solid #10be01;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 24px;
   font-weight: bolder;
+  margin-bottom: 30px;
+  border-radius: 8px;
 }
 
 #medium {
   background-color: Gold ;
-  border: none;
+  border: 2px solid #d6b600;
+  width: 100%;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 24px;
   font-weight: bolder;
+  margin-bottom: 30px;
+  border-radius: 8px;
 }
 
 #hard {
   background-color: LightSalmon;
-  border: none;
+  border: 2px solid #ff4930;
+  width: 100%;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 24px;
   font-weight: bolder;
+  margin-bottom: 30px;
+  border-radius: 8px;
 }
+
+
 
 #restart {
   background-color: rgb(81, 57, 214);
-  border: none;
+  border: 2px solid #8400ff;
   color: white;
   padding: 15px 32px;
   text-align: center;
