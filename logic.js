@@ -24,21 +24,21 @@ function setEasy() {
     document.querySelector(".difficulty").style.visibility = "hidden";
     document.querySelector("#heading").style.visibility = "visible";
     document.querySelector("#timer").style.visibility = "visible";
-    sec = 140;
+    sec = 180;
 }
 
 function setMedium() {
     document.querySelector(".difficulty").style.visibility = "hidden";
     document.querySelector("#heading").style.visibility = "visible";
     document.querySelector("#timer").style.visibility = "visible";
-    sec = 120;
+    sec = 130;
 }
 
 function setHard() {
     document.querySelector(".difficulty").style.visibility = "hidden";
     document.querySelector("#heading").style.visibility = "visible";
     document.querySelector("#timer").style.visibility = "visible";
-    sec = 60;
+    sec = 100;
 }
 
 setInterval(function () {
@@ -125,6 +125,26 @@ const cardArray = [
         name: 'sunset',
         img: 'images/sunset.png'
     },
+
+    {
+        name: 'kitty',
+        img: 'images/kitty.png'
+    },
+
+    {
+        name: 'kitty',
+        img: 'images/kitty.png'
+    },
+
+    {
+        name: 'old',
+        img: 'images/old.png'
+    },
+
+    {
+        name: 'old',
+        img: 'images/old.png'
+    }
 ]
 
 // Radomize card order when page loads
